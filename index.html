@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Anjali Jadhav">
+  <title>Cognifyz | API Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">COGNIFYZ<span>.</span></a>
+    <div class="author">Internship Project · Task 7</div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">LEVEL 4 · EXPERT</p>
+      <h1>External API<br><span>Integration</span></h1>
+      <p class="subtitle">
+        A real-time weather dashboard demonstrating secure API
+        integration, request validation, rate limiting and error handling.
+      </p>
+    </section>
+
+    <section class="dashboard">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">LIVE DATA</p>
+          <h2>Weather Explorer</h2>
+        </div>
+        <span class="status"><span class="dot"></span> API dashboard</span>
+      </div>
+
+      <form id="weather-form" class="search-form">
+        <label for="city">Enter a city name</label>
+        <div class="search-row">
+          <input id="city" name="city" type="text"
+            placeholder="e.g. Pune, Mumbai, London"
+            maxlength="100" required>
+          <button id="search-button" type="submit">Search</button>
+        </div>
+      </form>
+
+      <p id="message" class="message" role="status" aria-live="polite">
+        Search for a city to load current weather data.
+      </p>
+
+      <section id="weather-result" class="weather-result" hidden>
+        <div class="weather-main">
+          <div>
+            <p class="eyebrow">CURRENT WEATHER</p>
+            <h2 id="location">Pune, IN</h2>
+            <p id="description" class="description">Clear sky</p>
+          </div>
+          <img id="weather-icon" alt="Weather conditions" width="90" height="90">
+        </div>
+
+        <p class="temperature"><span id="temperature">--</span><span>°C</span></p>
+        <p class="feels">Feels like <span id="feels-like">--</span>°C</p>
+
+        <div class="metrics">
+          <article class="metric">
+            <span>Humidity</span>
+            <strong id="humidity">--%</strong>
+          </article>
+          <article class="metric">
+            <span>Wind speed</span>
+            <strong id="wind">-- m/s</strong>
+          </article>
+        </div>
+      </section>
+
+      <div class="feature-grid">
+        <article class="feature">
+          <span class="feature-number">01</span>
+          <h3>API Integration</h3>
+          <p>Fetches current weather from an external service.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-number">02</span>
+          <h3>Secure Config</h3>
+          <p>Keeps the API key in a server-side environment file.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-number">03</span>
+          <h3>Rate Limiting</h3>
+          <p>Restricts repeated requests to the weather endpoint.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-number">04</span>
+          <h3>Error Handling</h3>
+          <p>Shows useful messages for common failures.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p>Developed by <strong>Anjali Jadhav</strong></p>
+      <p>Cognifyz Technologies · Task 7</p>
+    </footer>
+  </main>
+</body>
+</html>

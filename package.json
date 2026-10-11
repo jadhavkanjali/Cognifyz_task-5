@@ -1,0 +1,26 @@
+
+{
+  "name": "cognifyz_task7",
+  "version": "1.0.0",
+  "description": "Advanced API Integration - Cognifyz Technologies Task 7 by Anjali Jadhav",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "api-integration",
+    "cognifyz",
+    "nodejs"
+  ],
+  "author": "Anjali Jadhav",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1"
+  }
+}
+
+
